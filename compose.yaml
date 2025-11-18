@@ -9,6 +9,20 @@ services:
       - "5000:5000"
     volumes:
       - steedos-storage:/steedos-storage
+
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=oarnud9I
+    volumes:
+      - minio-data:/data
+    command: server /data --console-address ":9001"
   
   caddy:
     image: caddy:latest
@@ -28,3 +42,4 @@ volumes:
   caddy_data:
   caddy_config:
   steedos-storage:
+  minio-data:

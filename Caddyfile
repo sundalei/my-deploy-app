@@ -12,3 +12,7 @@ home.sundalei.me {
 steedos.sundalei.me {
     reverse_proxy steedos:5000
 }
+
+minio.sundalei.me {
+    reverse_proxy minio:9001
+}
