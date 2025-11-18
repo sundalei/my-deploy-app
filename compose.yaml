@@ -11,7 +11,7 @@ services:
       - steedos-storage:/steedos-storage
 
   minio:
-    image: quay.io/minio/minio
+    image: quay.io/minio/minio:RELEASE.2025-04-03T14-56-28Z
     container_name: minio
     restart: unless-stopped
     ports:
