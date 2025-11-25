@@ -1,18 +1,3 @@
-home.sundalei.me {
-
-    handle_path /user-ldap/* {
-        reverse_proxy user-ldap:8080
-    }
-    
-    handle_path / {
-        respond "Welcome to the main page!"
-    }
-}
-
-steedos.sundalei.me {
-    reverse_proxy steedos:5000
-}
-
 minio.sundalei.me {
     reverse_proxy minio:9001
 }
