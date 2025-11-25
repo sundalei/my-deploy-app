@@ -26,7 +26,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     depends_on:
-      - steedos
+      - minio
 
 volumes:
   caddy_data:
