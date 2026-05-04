@@ -1,0 +1,8 @@
+services:
+  obsidian:
+    image: lscr.io/linuxserver/obsidian:latest
+    container_name: obsidian
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Asia/Shanghai
